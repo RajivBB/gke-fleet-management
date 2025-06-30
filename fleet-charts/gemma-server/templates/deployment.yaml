@@ -101,14 +101,14 @@ spec:
         image: "{{ .Values.image }}"
         resources:
           requests:
-            cpu: "10"
-            memory: "128Gi"
-            ephemeral-storage: "120Gi"
+            cpu: "512m"
+            memory: "512Mi"
+            ephemeral-storage: "1Gi"
             nvidia.com/gpu : "1"
           limits:
-            cpu: "10"
-            memory: "128Gi"
-            ephemeral-storage: "120Gi"
+            cpu: "1Gi"
+            memory: "1Gi"
+            ephemeral-storage: "2Gi"
             nvidia.com/gpu : "1"
         command: ["python3", "-m", "vllm.entrypoints.openai.api_server"]
         args:
@@ -147,6 +147,4 @@ spec:
       - name: config-volume
         configMap:
           name: envoy-config
-      nodeSelector:
-        cloud.google.com/gke-accelerator: "{{ .Values.accelerator }}"
-        cloud.google.com/gke-gpu-driver-version: latest
+

@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-apiVersion: monitoring.googleapis.com/v1
-kind: PodMonitoring
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
 metadata:
   name: vllm-prometheus
   labels:
