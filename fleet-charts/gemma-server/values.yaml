@@ -14,7 +14,7 @@
 
 # Gemma 3 weights: 1b, 4b, 12b, 27b
 weight: "1b"
-hf_api_token: ""
+hf_api_token: "xxxx"
 image: "us-docker.pkg.dev/vertex-ai/vertex-vision-model-garden-dockers/pytorch-vllm-serve:20250312_0916_RC01"
 accelerator: "nvidia-l4"
 minReplicas: 1
